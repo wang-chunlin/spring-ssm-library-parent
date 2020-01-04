@@ -1,0 +1,32 @@
+body{
+    background-size: 100%;					/*图片大小*/
+    background-repeat: no-repeat;
+    background-image: url(../../img/2.jpg);
+}
+form{
+    width: 550px;
+    height: 600px;
+    margin-left:400px;
+    margin-top: 10px;
+}
+
+h1{
+    margin-left: 180px;
+}
+div#div1{
+    float: left;
+    height: 400px;
+    width: 243px;
+    margin-top: 20px;
+}
+
+div#div2{
+    float: right;
+    height: 400px;
+    width: 243px;
+    margin-top: 20px;
+}
+
+button{
+    margin-top: 50px;
+}

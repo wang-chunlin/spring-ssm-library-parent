@@ -1,0 +1,73 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-size: 1400px;					/*图片大小*/
+    background-repeat: no-repeat;				/*背景图片不重复*/
+    background-image: url(../../img/login1.jpg);   /*背景图片*/
+}
+
+#div1{										    /*登录窗口区域*/
+    width: 370px;							    /*宽度*/
+    height: 370px;							    /*高度*/
+    margin-top:100px ;						    /*上外边距*/
+    margin-left: 500px;						    /*左外边距*/
+    border-radius: 20px;					    /*给div元素添加圆角的边框*/
+    border:3px solid #808080;				    /*边框4清晰度\实线\灰色*/
+    box-shadow:7px 4px 15px #333333;		    /*区域阴影*/
+    -moz-box-shadow:7px -4px 15px #333333;
+    -webkit-box-shadow:7px -4px 15px #333333;
+}
+/*h1{*/
+/*    font-size: 60px;							!*字体大小*!*/
+/*    font-family: "隶书";							!*字体*!*/
+/*    color: lightsteelblue;						!*字体颜色*!*/
+/*    text-align: center;							!*字体位置*!*/
+/*    text-shadow:6px -2px 4px #1B1433;			!*字体阴影*!*/
+/*    -webkit-text-stroke: 1.4px #000000;*/
+/*}*/
+form{
+    padding-top: 50px;							/*上内边距*/
+    padding-left: 70px;						    /*左内边距*/
+}
+
+span{
+    font-size: 25px;
+    color: #0000FF;
+}
+
+#text1,#password1{
+    border: 0px;									/*边框*/
+    outline: 0px;									/*轮廓*/
+    background: none;								/*背景*/
+    border-bottom: 1px solid blue;					/*下边框*/
+}
+#text1{
+    height: 20px;									/*文本框高度*/
+}
+
+#password1{
+    margin-top: 20px;								/*上外边距*/
+}
+
+#button1,#button2{
+    width: 60px;
+    height: 25px;
+    margin-left:30px ;								/*左外边距*/
+    margin-top:30px;								/*上外边距*/
+    background-color:#66d9ff;
+}
+
+#a1{
+    margin-top: 0px;
+    margin-left: 20px;
+    color: #0000FF;
+}
+#div2{
+    margin-top: 20px;
+    margin-left: 140px;
+    background-size: 90px;
+    width: 100px;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-image:url("../../img/login3.png") ;
+}

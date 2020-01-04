@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.ReadersDao">
+    <select id="getAll" resultType="com.entity.Readers" parameterType="integer" >
+        select read_id,read_name,read_sex,read_age,read_idcard,read_phone,read_registertime,deposit,remarks,photo from readers
+        order by read_id
+    </select>
+
+    <insert id="insert" parameterType="com.entity.Readers">
+        insert into readers(read_name,read_sex,read_age,read_idcard,read_phone,read_registertime,deposit,remarks,photo)
+        values(#{readName},#{readSex},#{readAge},#{readIdCard},#{readPhone},#{readRegistertime},#{deposit},#{remarks},#{photo})
+    </insert>
+
+    <update id="update" >
+        update readers
+        set read_name=#{readName},
+                    read_sex=#{readSex},
+                    read_age=#{readAge},
+                    read_idcard=#{readIdCard},
+                    read_phone=#{readPhone},
+                    read_registertime=#{readRegistertime},
+                    deposit=#{deposit},
+                    remarks=#{remarks},
+                    photo=#{photo}
+                    where read_id=#{readId}
+    </update>
+    <select id="getReader" resultType="com.entity.Readers">
+        select read_id,read_name,read_sex,read_age,read_idcard,read_phone,read_registertime,deposit,remarks,photo from readers
+        where read_id=#{readId}
+    </select>
+
+    <delete id="delete">
+        delete from readers where read_id=#{readId}
+    </delete>
+
+
+    <update id="investMoney">
+        update readers
+            set deposit=deposit+ #{money}
+            where read_id = #{id}
+    </update>
+</mapper>

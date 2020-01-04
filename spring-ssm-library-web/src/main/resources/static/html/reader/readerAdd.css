@@ -1,0 +1,29 @@
+body{
+   background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(../../img/2.jpg);
+}
+form{
+    width: 750px;
+    height: 500px;
+    margin-left: 200px;
+    margin-top: 10px;
+}
+#div1{
+    float: left;
+    width: 230px;
+    height: 400px;
+    margin-top: 70px;
+
+}
+#div1 input.form-control,textarea{
+    width: 250px;
+}
+
+
+#div2{
+    width: 230px;
+    float: left;
+    height:300px;
+    margin: 70px 100px;
+}

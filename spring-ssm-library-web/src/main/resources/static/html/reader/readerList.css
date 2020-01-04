@@ -1,0 +1,8 @@
+#img1{
+   width: 80px;
+}
+body{
+   background-size: 100%;					/*图片大小*/
+   background-repeat: no-repeat;
+   background-image: url(../../img/2.jpg);
+}

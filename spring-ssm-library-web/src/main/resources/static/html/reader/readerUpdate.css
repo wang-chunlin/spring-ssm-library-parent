@@ -1,0 +1,24 @@
+body{
+    background-size: 100%;					/*图片大小*/
+    background-repeat: no-repeat;
+}
+form{
+    margin-left: 300px;
+    margin-top: 30px;
+}
+input.form-control{
+    width: 300px;
+}
+
+#div4{
+    margin-left: 950px;
+}
+#div1,#div2{
+    float: left;
+}
+
+#div3{
+    margin-top: 150px;
+    margin-right: 200px;
+    float: right;
+}

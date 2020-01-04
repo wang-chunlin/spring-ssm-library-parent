@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.BorrowDao">
+    <select id="getAll" resultType="com.entity.Borrow" parameterType="integer">
+        select bo_id,book_id,read_id,lendtime,returntime from borrow
+    </select>
+
+<!--    <select id="getAll" resultType="com.entity.Borrow" parameterType="integer">-->
+<!--&lt;!&ndash;        select b.book_id,r.read_id,read_name,read_sex,b.book_name,b.author,b2.lendtime,b2.returntime from readers r inner join books b on r.book_id = b.book_id inner join borrow b2 on b.book_id = b2.book_id&ndash;&gt;-->
+<!--&lt;!&ndash;         where r.book_id=#{bookId};&ndash;&gt;-->
+<!--        select r.read_id,read_name,read_sex,b.book_id,b.book_name,b.author,b2.lendtime,b2.returntime from readers r,books b,borrow b2 where r.book_id=b2.book_id and b2.book_id=b.book_id-->
+<!--    </select>-->
+
+
+
+    <insert id="insertBottow">
+        insert into borrow(book_id,read_id,lendtime,returntime) values(#{bookId},#{readId},#{lendtime},#{returntime})
+    </insert>
+
+    <update id="updateBorrow">
+        update books set total =total-1  where book_id = #{bookId}
+    </update>
+</mapper>
