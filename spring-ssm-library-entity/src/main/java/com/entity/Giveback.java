@@ -9,10 +9,13 @@ public class Giveback {
     private Integer gbId;
     private Integer bookId;
     private Integer readId;
+    private Date lendtime;
+    private Date returntime;
     private Date overTime;
     private float eventRent;
     private Integer rentDay;
     private Integer rent;
     private String state;
     private String breakage;
+    private String shifouReturn;
 }

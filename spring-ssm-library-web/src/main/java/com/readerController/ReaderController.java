@@ -1,5 +1,6 @@
 package com.readerController;
 
+import com.entity.Books;
 import com.entity.Readers;
 import com.github.pagehelper.PageInfo;
 import com.service.ReadersService;
@@ -100,5 +101,15 @@ public class ReaderController {
         return "redirect:/readers/list";
     }
 
-
+    @RequestMapping("/getReaderName")
+    public String getReaderName(@RequestParam(value = "pageNum",
+            required = false,defaultValue = "1") int pageNum,
+                              @RequestParam(value = "pageSize",
+                                      required = false,defaultValue = "10") int pageSize,
+                              String readName,Model model) {
+        List<Readers> list=readersService.getReaderName(pageNum,pageSize,readName);
+        PageInfo pageInfo = new PageInfo(list);
+        model.addAttribute("list",pageInfo);
+        return "redirect:/readers/list";
+    }
 }

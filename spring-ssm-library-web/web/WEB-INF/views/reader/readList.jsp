@@ -19,8 +19,18 @@
     <link rel="stylesheet" type="text/css" href="/static/html/reader/readerList.css">
 </head>
 <body>
+<div class="col-lg-6" style="width: 250px;margin-top:10px;margin-bottom: 5px;float: left">
+    <form action="${path}/readers/getReaderName" method="post">
+        <div class="input-group" >
+            <input type="text" name="bookName" class="form-control" placeholder="根据姓名查询">
+            <span class="input-group-btn">
+                <button class="btn btn-default" onclick="butOK" type="submit">Go!</button>
+            </span>
+        </div>
+    </form>
+</div>
     <table class="table table-hover">
-        <caption style="text-align: center"><span style=" font-size: 30px;font-family: STCaiyun">读者信息</span></caption>
+<%--        <caption style="text-align: center"><span style=" font-size: 30px;font-family: STCaiyun">读者信息</span></caption>--%>
         <tr>
             <th>读者编号</th>
             <th>读者姓名</th>
@@ -31,7 +41,7 @@
             <th>登记日期</th>
             <th>押金金额</th>
             <th>备注</th>
-            <th>添加图片</th>
+            <th>图片</th>
             <th colspan="2" style="text-align: center">操作</th>
         </tr>
       <c:forEach items="${read.list}" var="read">

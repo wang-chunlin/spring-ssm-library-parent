@@ -20,23 +20,25 @@ import java.io.IOException;
 public class LoginController {
     @Autowired
     private LoginService loginService;
+
     //转向登录页面
     @RequestMapping("/")
-    public String tologin(){
+    public String tologin() {
         return "login/login";
     }
+
     //登录验证
     @RequestMapping("/login")
-    public String  login(Login login, Model model, HttpServletRequest request,HttpSession session){
+    public String login(Login login, Model model, HttpServletRequest request, HttpSession session) {
         String staName = request.getParameter("staName");
         String password = request.getParameter("password");
-        if(loginService.logins(login) != null){
-            session.setAttribute("staName",staName);
-            session.setAttribute("password",password);
+        if (loginService.logins(login) != null) {
+            session.setAttribute("staName", staName);
+            session.setAttribute("password", password);
             return "forward:/buju/select";
-        }else{
-            model.addAttribute("error","账号或密码错误");
-            return "redirect:/login/login";
+        } else {
+            model.addAttribute("error", "账号或密码错误");
+            return "redirect:/login";
         }
 
 
@@ -45,7 +47,7 @@ public class LoginController {
 
     //转向注册页面
     @RequestMapping("/registe")
-    public String toregiste(){
+    public String toregiste() {
         return "login/register";
     }
 
@@ -66,11 +68,11 @@ public class LoginController {
                 System.out.println("用户注册: " + login.getStaName() + login.getPassword());
                 mv.setViewName("login/login");
                 return mv;
-            }else {
-            mv.setViewName("login/register");
-            return mv;
+            } else {
+                mv.setViewName("login/register");
+                return mv;
             }
         }
     }
-
 }
+

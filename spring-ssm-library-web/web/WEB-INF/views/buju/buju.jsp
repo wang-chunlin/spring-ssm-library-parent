@@ -23,7 +23,7 @@
         <li><a href="/buju/shouye" target="box">首页</a> </li>
         <li><a href="/book/list" target="box">图书管理</a> </li>
         <li><a href="/login"></a> </li>
-        <li style="float: right;width: 150px"><span style="float: left;margin-top: 13px">欢迎您!</span><a href="#" style="width: 80px;float: left"> ${staName}</a> </li>
+        <li style="float: right;width: 210px"><span style="float: left;margin-top: 13px">欢迎您!</span><a href="#" style="width: 80px;float: left"> ${staName}</a><span><a href="/" style="margin-top:10px;width:80px;height:30px;float: left">[退出]</a></span> </li>
     </ul>
 </div>
 
@@ -59,8 +59,9 @@
             </a>
             <ul class="dropdown-menu" role="menu">
                 <li><a href="/borrows/List" target="box">查询借阅信息</a> </li>
+                <li><a href="/giveback/List" target="box">查询归还信息</a> </li>
                 <li><a href="/borrows/borrows" target="box">借书</a></li>
-                <li><a href="#">还书</a></li>
+                <li><a href="/giveback/giveback" target="box">还书</a></li>
             </ul>
         </li>
         <li class="dropdown">
@@ -70,6 +71,7 @@
             <ul class="dropdown-menu" role="menu">
                 <li><a href="/admin/adminlist" target="box">个人信息</a></li>
                 <li><a href="/admin/edit" target="box">修改密码</a></li>
+
             </ul>
         </li>
 

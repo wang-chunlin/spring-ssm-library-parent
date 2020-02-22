@@ -3,6 +3,7 @@ package com.booksController;
 import com.entity.Books;
 import com.github.pagehelper.PageInfo;
 import com.service.BooksService;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Controller;
@@ -11,14 +12,18 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import javax.validation.Valid;
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 
 @Controller
 @RequestMapping("/book")
 public class BooksController {
+    private  static final  String  FILE_DIRECTORY="E:\\spring-ssm-library-parent\\spring-ssm-library-web\\src\\main\\resources\\static\\img";
     @Autowired
     private BooksService booksService;
 
@@ -80,16 +85,42 @@ public class BooksController {
             return mvc;
         }
        booksService.insert(books);
-        mvc.setViewName("books/list");
+        mvc.setViewName("redirect:list");
         return mvc;
-
     }
+//@RequestMapping("/insert")
+//public ModelAndView insert(@Valid Books books, BindingResult result, MultipartFile bookFile) {
+//        ModelAndView mvc = new ModelAndView();
+//        if(result.hasErrors()){
+//            List<FieldError> errors = result.getFieldErrors();
+//            for(FieldError error: errors){
+//                mvc.addObject(error.getField(),error.getDefaultMessage() );
+//            }
+//            mvc.setViewName("books/add");
+//            return mvc;
+//        }
+////    String filename = bookFile.getOriginalFilename();
+////    String path = FILE_DIRECTORY + File.separator + filename;
+////    File file=new File(path);
+////    books.setBookPhoto(filename);
+////    try {
+////        bookFile.transferTo(file);
+////        booksService.insert(books);
+////    } catch (IOException e) {
+////        e.printStackTrace();
+////    }
+////    mvc.setViewName("books/list");
+//    return "books/list";
+//}
+
 
     //图书删除
   @RequestMapping("/delete")
-    public String delete(Integer bookId){
+    public ModelAndView delete(Integer bookId){
         booksService.delete(bookId);
-        return "books/list";
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("redirect:/book/list");
+        return mav;
     }
 
     //图书修改,先通过get方法得到一个对象

@@ -3,8 +3,9 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dao.BorrowDao">
-    <select id="getAll" resultType="com.entity.Borrow" parameterType="integer">
-        select bo_id,book_id,read_id,lendtime,returntime from borrow
+    <select id="getAll" resultType="com.entity.Giveback" parameterType="integer">
+        select gb_id,book_id,read_id,lendtime,returntime from giveback
+        where shifou_return='否'
     </select>
 
 <!--    <select id="getAll" resultType="com.entity.Borrow" parameterType="integer">-->
@@ -16,10 +17,10 @@
 
 
     <insert id="insertBottow">
-        insert into borrow(book_id,read_id,lendtime,returntime) values(#{bookId},#{readId},#{lendtime},#{returntime})
+        insert into giveback(book_id,read_id,lendtime,returntime) values(#{bookId},#{readId},#{lendtime},#{returntime})
     </insert>
 
     <update id="updateBorrow">
-        update books set total =total-1  where book_id = #{bookId}
+        update books set surplus =surplus-1  where book_id = #{bookId}
     </update>
 </mapper>

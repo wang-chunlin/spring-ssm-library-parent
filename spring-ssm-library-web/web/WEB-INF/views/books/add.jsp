@@ -53,6 +53,8 @@
            <label>存放位置:</label>
            <input type="text" name="position">
            <span style="color: red;font-size:8px">${position}</span><br>
+<%--           <label>图片：</label>--%>
+<%--           <input type="file" class="form-control" name="myfile1">--%>
        </div>
 
         <button id="btn" type="submit" class="btn btn-default">添加</button>

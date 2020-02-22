@@ -1,5 +1,6 @@
 package com.service;
 
+import com.entity.Books;
 import com.entity.Readers;
 
 import java.util.List;
@@ -15,4 +16,6 @@ public interface ReadersService {
 
     //读者充值
     void investMoney(int id ,double money);
+
+    List<Readers> getReaderName(int pageNum, int pageSize, String readName);
 }

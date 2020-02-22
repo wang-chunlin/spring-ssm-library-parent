@@ -2,10 +2,18 @@ span{
     height: 20px;
 }
 
+tr,th{
+    text-align:center;
+}
+
 body{
     margin: 0px;
     padding: 0px;
     background-size: 100%;					/*图片大小*/
     background-repeat: no-repeat;				/*背景图片不重复*/
     background-image: url(../../img/2.jpg);
+}
+
+#book_img{
+    width: 80px;
 }

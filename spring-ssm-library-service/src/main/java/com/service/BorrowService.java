@@ -1,11 +1,12 @@
 package com.service;
 
 import com.entity.Borrow;
+import com.entity.Giveback;
 
 import java.util.List;
 
 public interface BorrowService {
-    List<Borrow> getAll(int pageNum, int pageSize);
+    List<Giveback> getAll(int pageNum, int pageSize);
 
 }
 

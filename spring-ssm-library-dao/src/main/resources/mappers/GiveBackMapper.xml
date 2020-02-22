@@ -4,16 +4,23 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dao.GivebackDao">
     <select id="getGiveback" parameterType="integer" resultType="com.entity.Giveback">
-        select a.gb_id,book_id,read_id,over_time,event_rent,rent_day,rent,state,breakage,b.lendtime,b.returntime from giveback a,borrow b where a.book_id=b.book_id and a.read_id and b.read_id
+        select gb_id,book_id,read_id,lendtime,returntime,over_time,event_rent,rent_day,rent,state,breakage from giveback
+        where shifou_return='是'
     </select>
 
-    <insert id="insertGiveback">
-        insert into giveback(book_id,read_id,over_time,event_rent,rent_day,rent,state,breakage) values(#{bookId},#{readId},#{overTime},#{eventRent},#{rentDay},#{rent},#{state},#{breakage})
-    </insert>
-    <update id="updateGiveback">
-        update books set total =total+1 where book_id=#{bookId}
+<!--    <update id="updateOverTime">-->
+<!--        update giveback-->
+<!--        set over_time=(returntime-lendtime)+30-(returntime-lendtime)-->
+<!--    </update>-->
+    <update id="updateBookNum">
+        update books
+        set surplus =surplus+1
+        where book_id=#{bookId}
     </update>
-    <delete id="deleteGiveback">
-        delete from borrow where book_id=#{bookId}
-    </delete>
+    <update id="updateGiveback">
+        update giveback
+        set shifou_return='是'
+        where book_id=#{bookId}
+    </update>
+
 </mapper>

@@ -3,5 +3,13 @@
  sort_name varchar(10) not null
  );
 
- insert into sort(sort_name) values('古装'),
-                                   ('武侠');
+ insert into sort(sort_name)
+     values('历史名著'),
+            ('文学经典'),
+            ('演讲/口才'),
+            ('心理学'),
+            ('成功'),
+            ('玄幻'),
+            ('武侠'),
+            ('科幻'),
+            ('励志')

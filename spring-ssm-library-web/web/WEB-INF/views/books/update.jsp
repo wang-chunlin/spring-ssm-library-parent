@@ -10,19 +10,26 @@
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/static/html/books/booksUpdate.css"/>
+    <script src="/static/js/jquery-3.3.1.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.js"></script>
+    <link href="/static/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet"/>
+    <script src="//libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
 </head>
 <body>
-<form method="post" action="/book/update">
+<form  method="post" action="/book/update">
     <label>编号:</label>
-    <input type="text" name="bookId" value="${emp.bookId}"/><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="bookId" value="${emp.bookId}"/><br>
     <label>图书名称:</label>
     <input type="text" name="bookName" value="${emp.bookName}"/><br>
     <label>作者:</label>
-    <input type="text" name="author" value="${emp.author}"/><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="author" value="${emp.author}"/><br>
     <label>译者:</label>
-    <input type="text" name="translator" value="${emp.translator}"><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="translator" value="${emp.translator}"><br>
     <label>出版社:</label>
-    <input type="text" name="press" value="${emp.press}"><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="press" value="${emp.press}"><br>
     <label>出版时间:</label>
     <input type="date" name="presstime" value="${emp.presstime}"><br>
     <label>图书类型:</label>
@@ -36,8 +43,8 @@
     <label>登记日期:</label>
     <input type="date" name="registertime" value="${emp.registertime}"><br/>
     <label>简介:</label>
-    <input type="text" name="synopsis" value="${emp.synopsis}"><br>
-    <input type="submit" value="编辑" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="synopsis" value="${emp.synopsis}"><br>
+    <input type="submit" id="submit1" value="编辑" />
 </form>
 </body>
 </html>

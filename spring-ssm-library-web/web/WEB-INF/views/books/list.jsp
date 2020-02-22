@@ -14,8 +14,32 @@
     <script src="/static/js/jquery-3.3.1.min.js"></script>
     <script src="/static/bootstrap/js/bootstrap.js"></script>
     <link href="/static/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet"/>
-
-    <link rel="stylesheet" href="/static/layui/css/layui.css">
+    <script src="/static/js/list.js"></script>
+<%--    <style type="text/css">--%>
+<%--        #login{--%>
+<%--            display:none;--%>
+<%--            border:1em solid #3366FF;--%>
+<%--            height:30%;--%>
+<%--            width:50%;--%>
+<%--            position:absolute;/*让节点脱离文档流,我的理解就是,从页面上浮出来,不再按照文档其它内容布局*/--%>
+<%--            top:24%;/*节点脱离了文档流,如果设置位置需要用top和left,right,bottom定位*/--%>
+<%--            left:24%;--%>
+<%--            z-index:2;/*个人理解为层级关系,由于这个节点要在顶部显示,所以这个值比其余节点的都大*/--%>
+<%--            background: white;--%>
+<%--        }--%>
+<%--        #over{--%>
+<%--            width: 100%;--%>
+<%--            height: 100%;--%>
+<%--            opacity:0.8;/*设置背景色透明度,1为完全不透明,IE需要使用filter:alpha(opacity=80);*/--%>
+<%--            filter:alpha(opacity=80);--%>
+<%--            display: none;--%>
+<%--            position:absolute;--%>
+<%--            top:0;--%>
+<%--            left:0;--%>
+<%--            z-index:1;--%>
+<%--            background: silver;--%>
+<%--        }--%>
+<%--    </style>--%>
 </head>
 <body>
 
@@ -24,28 +48,29 @@
         <div class="input-group" >
             <input type="text" name="bookName" class="form-control" placeholder="根据书名查询">
             <span class="input-group-btn">
-                <button class="btn btn-default" type="submit">Go!</button>
+                <button class="btn btn-default" onclick="butOK" type="submit">Go!</button>
             </span>
         </div>
     </form>
-    <form action="${path}/book/getBookType" method="post">
+</div>
+<%--弹出层--%>
+<%--<div id="login">--%>
+<%--    <a href="javascript:hide()">关闭</a>--%>
+<%--    <div>书名不能为空</div>--%>
+<%--</div>--%>
+<%--<div id="over"></div>--%>
+
+<div style="float:left;margin-left: 50px">
+    <form action="${path}/book/getBookType" method="post" >
         <div class="form-group">
-            <select  name="sortId">
-                <option>--请选择--</option>
-                <%--                <c:forEach var="type" items="${type.list}">--%>
-                <%--                    <option  id="chaxun" value="${type.sortId}">${type.sortName}</option>--%>
-                <%--                </c:forEach>--%>
+            <select  name="sortId" style="margin-top: 15px">
+                <option>--请选择图书类型--</option>
                 <option value="1">武侠</option>
                 <option value="2">爱情</option>
             </select>
-            <button class="btn btn-default" type="submit">Go!</button>
+            <input type="submit" value="查询" style="height: 20px;line-height: 10px;">
         </div>
     </form>
-
-
-
-
-
 </div>
 
 <table class="table table-hover">
@@ -56,13 +81,13 @@
         <th>译者</th>
         <th>出版社</th>
         <th>出版时间</th>
-        <th>图书类型</th>
+<%--        <th>图书类型</th>--%>
         <th>藏书总量</th>
         <th>馆内剩余</th>
         <th>存放位置</th>
         <th>登记日期</th>
-        <th>简介</th>
-
+<%--        <th>图片</th>--%>
+        <th colspan="2">操作</th>
 
     </tr>
     <c:forEach items="${list.list}" var="emp">
@@ -73,12 +98,12 @@
             <td>${emp.translator}</td>
             <td>${emp.press}</td>
             <td><fmt:formatDate value="${emp.presstime}" pattern="yyyy/MM/dd"/> </td>
-            <td>${emp.sortId}</td>
+<%--            <td>${emp.sortId}</td>--%>
             <td>${emp.total}</td>
             <td>${emp.surplus}</td>
             <td>${emp.position}</td>
             <td><fmt:formatDate value="${emp.registertime}" pattern="yyyy/MM/dd"/> </td>
-            <td>${emp.synopsis}</td>
+<%--            <td><img id="book_img" src="/static/img/${emp.bookPhoto}"></td>--%>
             <td>
                 <a href="/book/delete/?bookId=${emp.bookId}" class="btn btn-warning btn-xs" role="button">下架</a>
             </td>
@@ -103,10 +128,5 @@
         </ul>
     </div>
   </footer>
-
-
-
-
-
 </body>
 </html>

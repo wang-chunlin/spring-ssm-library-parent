@@ -17,7 +17,8 @@
                           com.booksController,
                           com.readerController,
                           com.loginController,
-                          com.borrowController"/>
+                          com.borrowController,
+                           com.givebackController"/>
 
     <mvc:annotation-driven conversion-service="conversionService"/>
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -48,6 +49,7 @@
         <tx:attributes>
             <tx:method name="get*" read-only="true"/>
             <tx:method name="*" propagation="REQUIRED" rollback-for="com.dao.BorrowDao,
+                                                                    com.dao.GivebackDao
                                                         com.dao.ReadersDao"/>
         </tx:attributes>
     </tx:advice>

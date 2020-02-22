@@ -1,5 +1,6 @@
 package com.dao;
 
+import com.entity.Books;
 import com.entity.Readers;
 import org.apache.ibatis.annotations.Param;
 
@@ -14,4 +15,6 @@ public interface ReadersDao {
     Readers getReader(Readers readers);
     //读者充值
     void investMoney(@Param("id") int id,@Param("money") double money);
+
+    List<Readers> getReaderName(@Param("pageNum")int pageNum, @Param("pageSize")int pageSize, @Param("readName")String readName);
 }

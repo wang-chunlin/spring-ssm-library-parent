@@ -14,7 +14,7 @@
     <link href="/static/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet"/>
     <script src="//libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="/static/html/borrow/borrow.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/html/borrow/borrowAdd.css"/>
 </head>
 <body>
 <h1 style="margin-left: 50px">借阅图书</h1>
@@ -32,7 +32,7 @@
             <input type="date" name="returntime"><br/>
 
         </div>
-        <input type="submit" value="提交" style="margin-left:150px;margin-bottom: 100px">
+        <input type="submit" value="提交" style="margin-left:200px;margin-bottom: 100px">
     </form>
 </body>
 </html>

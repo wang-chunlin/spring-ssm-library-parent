@@ -1,6 +1,7 @@
 package com.service.impl;
 
 import com.dao.ReadersDao;
+import com.entity.Books;
 import com.entity.Readers;
 import com.service.ReadersService;
 import lombok.extern.slf4j.Slf4j;
@@ -47,6 +48,11 @@ public class ReadersServiceImpl implements ReadersService {
     @Override
     public void investMoney(int id,double money) {
         dao.investMoney(id,money);
+    }
+
+    @Override
+    public List<Readers> getReaderName(int pageNum, int pageSize, String readName) {
+        return dao.getReaderName(pageNum,pageSize,readName);
     }
 
 

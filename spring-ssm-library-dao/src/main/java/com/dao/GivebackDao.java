@@ -10,7 +10,7 @@ public interface GivebackDao {
     List<Giveback> getGiveback(@Param("pageNum")int pageNum, @Param("pageSize")int pageSize);
 
     //归还
-    void insertGiveback(Giveback giveback);
+//    void updateOverTime(@Param("bookId")int bookId);
+    void updateBookNum(@Param("bookId")int bookId);
     void updateGiveback(@Param("bookId")int bookId);
-    void deleteGiveback(@Param("bookId")int bookId);
 }

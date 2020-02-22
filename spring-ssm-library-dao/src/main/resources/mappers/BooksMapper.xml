@@ -3,15 +3,18 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dao.BooksDao">
-    <select id="getAll" resultType="com.entity.Books" parameterType="Integer">
+    <select id="getAll" resultType="com.entity.Books" parameterType="integer">
         select book_id,book_name,author,translator,press,presstime,sort_id,total,surplus,position,registertime,synopsis from books
     </select>
-    <insert id="insert" >
+    <insert id="insert" parameterType="com.entity.Books" >
         insert into books(book_name,author,translator,press,presstime,sort_id,total,surplus,position,registertime,synopsis)
             values(#{bookName},#{author},#{translator},#{press},#{presstime},#{sortId},#{total},#{surplus},#{position},#{registertime},#{synopsis})
     </insert>
     <delete id="delete">
         delete from books where book_id=#{bookId}
+--         ALTER TABLE books DROP book_id;
+-- ALTER TABLE books ADD book_id int NOT NULL FIRST;
+-- ALTER TABLE books MODIFY COLUMN book_id int NOT NULL AUTO_INCREMENT,ADD PRIMARY KEY(book_id);
     </delete>
     <update id="update">
         update books
@@ -26,6 +29,7 @@
                          position=#{position},
                          registertime=#{registertime},
                         synopsis=#{synopsis}
+
                     where book_id=#{bookId}
     </update>
     <select id="get"  resultType="com.entity.Books">

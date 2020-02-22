@@ -41,4 +41,14 @@
             set deposit=deposit+ #{money}
             where read_id = #{id}
     </update>
+
+
+    <select id="getReaderName" resultType="com.entity.Readers">
+        select read_id,read_name,read_sex,read_age,read_idcard,read_phone,read_registertime,deposit,remarks,photo from readers
+        where 1=1
+        <if test="readName!=null and readName!=''">
+            and read_name LIKE '%' #{readName} '%'
+        </if>
+    </select>
+
 </mapper>

@@ -15,6 +15,7 @@
     <script src="/static/js/jquery-3.3.1.min.js"></script>
     <script src="/static/bootstrap/js/bootstrap.js"></script>
     <link href="/static/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="/static/html/borrow/borrow.css"/>
 </head>
 <body>
     <table class="table table-hover">
@@ -27,7 +28,7 @@
         </tr>
         <c:forEach items="${borrow.list}" var="borrow">
             <tr>
-                <td>${borrow.boId}</td>
+                <td>${borrow.gbId}</td>
                 <td>${borrow.bookId}</td>
                 <td>${borrow.readId}</td>
                 <td><fmt:formatDate value="${borrow.lendtime}" pattern="yyyy-MM-dd"/></td>
