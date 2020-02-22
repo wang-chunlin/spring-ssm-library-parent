@@ -20,9 +20,9 @@ public interface BooksDao {
     //查询对象
     Books get(Books books);
 
-    //模糊查询
+    //图书名模糊查询
     List<Books> getBookName(@Param("pageNum")int pageNum, @Param("pageSize")int pageSize,@Param("bookName")String bookName);
 
-    //
+    //图书类型查询
     List<Books> getBookType(@Param("pageNum")int pageNum, @Param("pageSize")int pageSize,@Param("sortId")int sortId);
 }

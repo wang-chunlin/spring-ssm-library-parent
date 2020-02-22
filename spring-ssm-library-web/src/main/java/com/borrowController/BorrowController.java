@@ -2,7 +2,6 @@ package com.borrowController;
 
 import com.dao.BorrowDao;
 import com.entity.Books;
-import com.entity.Borrow;
 import com.entity.Giveback;
 import com.github.pagehelper.PageInfo;
 import com.service.BooksService;
@@ -37,6 +36,7 @@ public class BorrowController {
      * @param model
      * @return
      */
+//    查询归还信息
     @RequestMapping("/List")
     public String list(@RequestParam(value = "pageNum",required = false,defaultValue = "1")int pageNum,
                        @RequestParam(value = "pageSize",required = false,defaultValue = "5")int pageSize,
@@ -48,7 +48,7 @@ public class BorrowController {
     }
 
 
-
+//    添加归还信息
     @RequestMapping("/borrows")
     public String bottow(){
         return "borrow/borrowAdd";

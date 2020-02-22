@@ -1,0 +1,44 @@
+/*span按钮中字体*/
+span{
+    height: 20px;
+}
+/*表中字体*/
+tr,th{
+    text-align:center;
+}
+/*背景图片*/
+body{
+    margin: 0px;
+    padding: 0px;
+    background-size: 100%;					/*图片大小*/
+    background-repeat: no-repeat;				/*背景图片不重复*/
+    background-image: url(../../img/2.jpg);
+}
+
+/*分页*/
+.navbar-fixed-bottom{
+    margin-left: 450px;
+}
+/*图书类型*/
+#tushuleixin{
+    float:left;
+    margin-left: 50px;
+}
+
+#leixin-select{
+    margin-top: 15px;
+}
+
+#leixin-submit{
+    height: 20px;
+    line-height: 10px;
+}
+
+/*书名查询*/
+#genjushuming{
+    width: 250px;
+    margin-top:10px;
+    margin-bottom: 5px;
+    float: left;
+}
+

@@ -59,10 +59,6 @@ public class LoginController {
             mv.setViewName("login/register");
             return mv;
         } else {
-//            loginService.register(login);
-//            System.out.println("用户注册: " + login.getStaName() + login.getPassword());
-//            mv.setViewName("login/login");
-//            return mv;
             if (login.getPassword().equals(request.getParameter("repassword"))) {
                 loginService.register(login);
                 System.out.println("用户注册: " + login.getStaName() + login.getPassword());

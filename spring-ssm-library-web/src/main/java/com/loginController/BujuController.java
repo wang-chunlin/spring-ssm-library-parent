@@ -14,7 +14,4 @@ public class BujuController {
     @RequestMapping("/shouye")
     public String shouye(){return "buju/shouye";}
 
-    @RequestMapping("/cc")
-    public String shouye2(){return "buju/cc";}
-
 }

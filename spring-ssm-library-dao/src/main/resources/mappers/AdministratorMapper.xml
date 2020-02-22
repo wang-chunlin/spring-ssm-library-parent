@@ -8,20 +8,6 @@
        where sta_name=#{name}
     </select>
 
-<!--    <update id="updateAdmin" parameterType="com.entity.Login">-->
-<!--        update administrator-->
-<!--        set sta_name=#{staName},-->
-<!--            sta_sex=#{staSex},-->
-<!--            nation=#{nation},-->
-<!--            birthday=#{birthday},-->
-<!--            idcard=#{idcard},-->
-<!--            address=#{address},-->
-<!--            phone=#{phone},-->
-<!--            graduate=#{graduate},-->
-<!--            hiredate=#{hiredate},-->
-<!--            password=#{password}-->
-<!--            where sta_id=#{staId}-->
-<!--    </update>-->
     <update id="updateAdmin" parameterType="com.entity.Login">
         update administrator
             set password=#{password}

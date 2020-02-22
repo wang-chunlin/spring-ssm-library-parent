@@ -24,13 +24,7 @@
         <span class="glyphicon glyphicon-lock"></span>&nbsp;:
         <input type="password" id="password1" name="password"/><br/>
         <input type="submit" id="button1" value="登录"/>
-<%--        <button type="button" class="btn btn-default btn-sm" id="button1">--%>
-<%--            登陆--%>
-<%--        </button>--%>
         <input type="button" id="button2" value="取消"/>
-<%--        <button type="button" class="btn btn-default btn-sm" id="button2" onclick="location.reload();">--%>
-<%--            取消--%>
-<%--        </button>--%>
         <a id="a1" href="/register">注册</a>
     </form>
 

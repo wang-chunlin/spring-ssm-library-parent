@@ -15,8 +15,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import javax.validation.Valid;
-import java.io.File;
-import java.io.IOException;
 import java.util.List;
 
 
@@ -88,30 +86,6 @@ public class BooksController {
         mvc.setViewName("redirect:list");
         return mvc;
     }
-//@RequestMapping("/insert")
-//public ModelAndView insert(@Valid Books books, BindingResult result, MultipartFile bookFile) {
-//        ModelAndView mvc = new ModelAndView();
-//        if(result.hasErrors()){
-//            List<FieldError> errors = result.getFieldErrors();
-//            for(FieldError error: errors){
-//                mvc.addObject(error.getField(),error.getDefaultMessage() );
-//            }
-//            mvc.setViewName("books/add");
-//            return mvc;
-//        }
-////    String filename = bookFile.getOriginalFilename();
-////    String path = FILE_DIRECTORY + File.separator + filename;
-////    File file=new File(path);
-////    books.setBookPhoto(filename);
-////    try {
-////        bookFile.transferTo(file);
-////        booksService.insert(books);
-////    } catch (IOException e) {
-////        e.printStackTrace();
-////    }
-////    mvc.setViewName("books/list");
-//    return "books/list";
-//}
 
 
     //图书删除

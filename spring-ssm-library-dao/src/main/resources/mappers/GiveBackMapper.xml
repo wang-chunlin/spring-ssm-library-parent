@@ -8,10 +8,6 @@
         where shifou_return='是'
     </select>
 
-<!--    <update id="updateOverTime">-->
-<!--        update giveback-->
-<!--        set over_time=(returntime-lendtime)+30-(returntime-lendtime)-->
-<!--    </update>-->
     <update id="updateBookNum">
         update books
         set surplus =surplus+1

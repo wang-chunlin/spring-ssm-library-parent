@@ -15,7 +15,6 @@ public class Login {
     private String nation;
     private String birthday;
     private String  idcard;
-    //    private Integer nativeplace;
     private String address;
     //    @Pattern(regexp="^((13[0-9])|(15[^4,\\D])|(18[0,5-9]))\\d{8}$", message="请输入正确的号码格式")
     private String phone;

@@ -1,3 +1,4 @@
+/*背景图片*/
 body{
     margin: 0px;
     padding: 0px;
@@ -5,6 +6,8 @@ body{
     background-repeat: no-repeat;
     background-image: url(../../img/2.jpg);
 }
+
+
 form{
     width: 1090px;
     height: 500px;
@@ -41,4 +44,9 @@ input{
 }
 .btn{
     margin-left: 10px;
+}
+/*span错误显示*/
+.tianjia{
+    color: red;
+    font-size:8px
 }

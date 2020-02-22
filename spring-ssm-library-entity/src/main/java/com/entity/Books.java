@@ -33,5 +33,4 @@ public class Books {
     private Date registertime;
 //    @NotEmpty(message = "**简介不能为空**")
     private String synopsis;
-//    private String bookPhoto;
 }

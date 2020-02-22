@@ -17,24 +17,19 @@ public class AdminServiceImpl implements AdminService {
         return dao.getAdmins(name);
     }
 
-
+    /*修改管理员信息*/
     @Override
     public Login updateAdmin(Login login) {
         dao.updateAdmin(login);
         return null;
     }
-
+    /*获取改登录管理员的姓名*/
     @Override
     public Login getAdmin(String staName) {
         Login login = new Login();
         login.setStaName(staName);
         return dao.getAdmin(login);
     }
-
-//    @Override
-//    public void deleteAdmin(int staId) {
-//        dao.deleteAdmin(staId);
-//    }
 
 
 }
