@@ -9,14 +9,16 @@
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/reader/invest.css"/>
 </head>
 <body>
+    <h1>充值</h1>
    <form action="/readers/investMoney" method="post">
        <label>读者编号：</label>
        <input type="text" name="readId" placeholder="填写编号">
        <label>充值面额：</label>
        <input type="text" name="deposit" >
-       <input type="submit" value="提交">
+       <input type="submit" id="submit1" value="提交">
    </form>
 
 </body>

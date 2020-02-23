@@ -43,25 +43,27 @@ public class ReaderController {
         return "reader/readList";
     }
 
-    //使用文件上传添加读者信息
+    //添加读者信息
     @RequestMapping("/add")
     public String index(){
         return "reader/readAdd";
     }
 
     @RequestMapping("/dengji")
-    public String index(Readers readers,MultipartFile myfile){
+    public ModelAndView index(Readers readers,MultipartFile myfile){
+        ModelAndView mav = new ModelAndView();
         String filename = myfile.getOriginalFilename();
         String path = FILE_DIRECTORY + File.separator + filename;
         File file=new File(path);
-       readers.setPhoto(filename);
+        readers.setPhoto(filename);
         try {
             myfile.transferTo(file);
             readersService.insert(readers);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return "redirect:list";
+        mav.setViewName("redirect:list");
+        return mav;
     }
 
 

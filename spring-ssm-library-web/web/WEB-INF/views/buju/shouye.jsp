@@ -8,10 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/buju/shouye.css"/>
 </head>
 <body>
-    <div style="text-align: center;margin-top: 200px;font-size:30px;font-family: 楷体 ">
+    <div>
         <h1>图书管理系统</h1>
     </div>
 </body>

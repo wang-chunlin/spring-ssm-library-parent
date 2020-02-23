@@ -16,10 +16,10 @@
     <script src="/static/js/jquery-3.3.1.min.js"></script>
     <script src="/static/bootstrap/js/bootstrap.js"></script>
     <link href="/static/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet"/>
-    <link rel="stylesheet" type="text/css" href="/static/html/reader/readerList.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/reader/readerList.css">
 </head>
 <body>
-<div class="col-lg-6" style="width: 250px;margin-top:10px;margin-bottom: 5px;float: left">
+<div class="col-lg-6" id="div-xingming">
     <form action="${path}/readers/getReaderName" method="post">
         <div class="input-group" >
             <input type="text" name="bookName" class="form-control" placeholder="根据姓名查询">
@@ -30,7 +30,6 @@
     </form>
 </div>
     <table class="table table-hover">
-<%--        <caption style="text-align: center"><span style=" font-size: 30px;font-family: STCaiyun">读者信息</span></caption>--%>
         <tr>
             <th>读者编号</th>
             <th>读者姓名</th>
@@ -42,7 +41,7 @@
             <th>押金金额</th>
             <th>备注</th>
             <th>图片</th>
-            <th colspan="2" style="text-align: center">操作</th>
+            <th colspan="2" id="caozuo">操作</th>
         </tr>
       <c:forEach items="${read.list}" var="read">
           <tr>
@@ -65,7 +64,7 @@
           </tr>
       </c:forEach>
     </table>
-    <footer class="navbar-fixed-bottom" style="margin-left: 450px">
+    <footer class="navbar-fixed-bottom">
           <div class="container">
               <ul class="pagination">
                   <li><a href="/readers/list?pageNum=3&pageSize=6"> 首页</a></li>
@@ -77,7 +76,7 @@
                   <li><a href="/readers/list?pageNum=${read.pages}&pageSize=6"> 尾页</a></li>
               </ul>
           </div>
-        </footer>
+    </footer>
 <script>
 
 

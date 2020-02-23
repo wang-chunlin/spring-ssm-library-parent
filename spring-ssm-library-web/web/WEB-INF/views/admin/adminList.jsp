@@ -16,7 +16,7 @@
     <script src="/static/js/jquery-3.3.1.min.js"></script>
     <script src="/static/bootstrap/js/bootstrap.js"></script>
     <link href="/static/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet"/>
-    <link href="/static/html/admin/adminList.css" type="text/css" rel="stylesheet"/>
+    <link href="/static/css/admin/adminList.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
     <table class="table table-hover">

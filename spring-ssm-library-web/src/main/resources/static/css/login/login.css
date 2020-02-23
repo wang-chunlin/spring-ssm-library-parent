@@ -1,6 +1,5 @@
+/*背景图片*/
 body{
-    margin: 0px;
-    padding: 0px;
     background-size: 1400px;					/*图片大小*/
     background-repeat: no-repeat;				/*背景图片不重复*/
     background-image: url(../../img/login1.jpg);   /*背景图片*/
@@ -17,14 +16,7 @@ body{
     -moz-box-shadow:7px -4px 15px #333333;
     -webkit-box-shadow:7px -4px 15px #333333;
 }
-/*h1{*/
-/*    font-size: 60px;							!*字体大小*!*/
-/*    font-family: "隶书";							!*字体*!*/
-/*    color: lightsteelblue;						!*字体颜色*!*/
-/*    text-align: center;							!*字体位置*!*/
-/*    text-shadow:6px -2px 4px #1B1433;			!*字体阴影*!*/
-/*    -webkit-text-stroke: 1.4px #000000;*/
-/*}*/
+
 form{
     padding-top: 50px;							/*上内边距*/
     padding-left: 70px;						    /*左内边距*/
@@ -62,6 +54,7 @@ span{
     margin-left: 20px;
     color: #0000FF;
 }
+
 #div2{
     margin-top: 20px;
     margin-left: 140px;

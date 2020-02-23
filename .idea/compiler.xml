@@ -6,10 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring-ssm-library-service" />
-        <module name="spring-ssm-library-dao" />
         <module name="spring-ssm-library-web" />
+        <module name="spring-ssm-library-service" />
         <module name="spring-ssm-library-entity" />
+        <module name="spring-ssm-library-dao" />
       </profile>
     </annotationProcessing>
   </component>

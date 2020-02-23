@@ -1,8 +1,27 @@
-#img1{
-   width: 80px;
-}
+/*背景图片*/
 body{
-   background-size: 100%;					/*图片大小*/
+   background-size: 100%;
    background-repeat: no-repeat;
    background-image: url(../../img/2.jpg);
+}
+
+/*姓名查询*/
+#div-xingming{
+   width: 250px;
+   margin-top:10px;
+   margin-bottom: 5px;
+   float: left;
+}
+/*首行操作列字体*/
+#caozuo{
+   text-align: center;
+}
+
+/*分页*/
+footer{
+   margin-left: 450px;
+}
+/*图片大小*/
+#img1{
+   width: 40px;
 }

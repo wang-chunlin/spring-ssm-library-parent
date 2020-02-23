@@ -13,7 +13,7 @@
 <script src="/static/js/jquery-3.3.1.min.js"></script>
 <script src="/static/bootstrap/js/bootstrap.js"></script>
 <link href="/static/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet"/>
-    <link rel="stylesheet" type="text/css" href="/static/html/giveback/giveback.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/giveback/giveback.css"/>
 </head>
 <body>
 <table class="table table-hover">

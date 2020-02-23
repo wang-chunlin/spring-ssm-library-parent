@@ -1,14 +1,22 @@
+/*背景图片*/
 body{
    background-size: 100%;
     background-repeat: no-repeat;
     background-image: url(../../img/2.jpg);
 }
+
+#h1{
+    margin-left: 850px;
+    font-family: 楷体;
+}
+/*form表单*/
 form{
     width: 750px;
     height: 500px;
     margin-left: 200px;
     margin-top: 10px;
 }
+/*第一个div容器*/
 #div1{
     float: left;
     width: 230px;
@@ -16,14 +24,20 @@ form{
     margin-top: 70px;
 
 }
+
 #div1 input.form-control,textarea{
     width: 250px;
 }
 
-
+/*第二个div容器*/
 #div2{
     width: 230px;
     float: left;
     height:300px;
     margin: 70px 100px;
+}
+/*提交按钮*/
+#submit-tijiao{
+    margin-left:100px;
+    margin-top: 150px;
 }

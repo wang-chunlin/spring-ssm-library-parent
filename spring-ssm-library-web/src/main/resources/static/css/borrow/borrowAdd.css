@@ -1,17 +1,28 @@
+/*背景图片*/
 body{
     background-size: 100%;					/*图片大小*/
     background-repeat: no-repeat;
     background-image: url(../../img/2.jpg);
 }
+
+/*标题字体*/
+h1{
+    margin-left: 50px;
+}
+/*form表单*/
 form{
     width: 250px;
     height: 250px;
     margin-left: 400px;
     margin-top: 100px;
 }
+/*div容器*/
 div{
     margin-top: 20px;
     margin-left: 30px;
+    width: 250px;
+    height: 300px;
+    float: left
 }
 label,input{
     margin-top:20px ;
@@ -21,4 +32,9 @@ div input{
     outline: 0px;									/*轮廓*/
     background: none;								/*背景*/
     border-bottom: 1px solid blue;					/*下边框*/
+}
+/*submit*/
+#submit-tijiao{
+    margin-left:200px;
+    margin-bottom: 100px
 }

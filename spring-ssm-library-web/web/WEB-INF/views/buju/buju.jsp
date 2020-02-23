@@ -13,7 +13,7 @@
     <script src="/static/bootstrap/js/bootstrap.js"></script>
     <link href="/static/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet"/>
     <script src="//libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/static/html/buju/buju.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/buju/buju.css"/>
 
 </head>
 <body>
@@ -23,7 +23,10 @@
         <li><a href="/buju/shouye" target="box">首页</a> </li>
         <li><a href="/book/list" target="box">图书管理</a> </li>
         <li><a href="/login"></a> </li>
-        <li style="float: right;width: 210px"><span style="float: left;margin-top: 13px">欢迎您!</span><a href="#" style="width: 80px;float: left"> ${staName}</a><span><a href="/" style="margin-top:10px;width:80px;height:30px;float: left">[退出]</a></span> </li>
+        <li id="li2">
+            <span id="span-huang">欢迎您!</span>
+            <a href="#" id="a-guanglinming"> ${staName}</a><span>
+            <a href="/" id="a-tuchu">[退出]</a></span> </li>
     </ul>
 </div>
 
@@ -71,10 +74,8 @@
             <ul class="dropdown-menu" role="menu">
                 <li><a href="/admin/adminlist" target="box">个人信息</a></li>
                 <li><a href="/admin/edit" target="box">修改密码</a></li>
-
             </ul>
         </li>
-
     </ul>
 </div>
 

@@ -1,0 +1,13 @@
+/*背景图片*/
+body{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(../../img/shouye.jpg);
+}
+/*首页字体*/
+div{
+    text-align: center;
+    margin-top: 200px;
+    font-size:30px;
+    font-family: 楷体;
+}

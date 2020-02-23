@@ -12,20 +12,20 @@
     <script src="/static/js/jquery-3.3.1.min.js"></script>
     <script src="/static/bootstrap/js/bootstrap.js"></script>
     <link href="/static/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet"/>
-    <link href="/static/html/admin/adminUpdate.css" type="text/css" rel="stylesheet"/>
+    <link href="/static/css/admin/adminUpdate.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-    <form action="/admin/updatePassword" method="post" style="margin-left: 400px;margin-top:100px">
+    <form action="/admin/updatePassword" method="post">
         <label>用户名：</label>
         <input type="text" name="staName" value="${admin.staName}" readonly><br><br>
         <label>原来密码：</label>
-         <input type="text" name="password" value="${admin.password}" readonly/><br><br>
+        <input type="text" name="password" style="margin-right: 10px" value="${admin.password}" readonly/><br><br>
         <label>密码：</label>
-        &nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="password" placeholder="填写修改密码"><br/><br>
+        <input type="password" id="input-password" name="password" placeholder="填写修改密码"><br/><br>
         <label>重置密码</label>
         <input type="password" name="repassword" placeholder="请再次输入密码">
-        <input type="submit" value="修改" onclick="submit()" style="margin-left: 170px;margin-top: 100px"/>
-        <input type="button" value="取消" style="margin-top: 100px;margin-left: 30px"/>
+        <input type="submit" value="修改" onclick="submit()" id="sumbit-xiugai"/>
+        <input type="button" value="取消" id="button-quxiao"/>
 
     </form>
 </body>

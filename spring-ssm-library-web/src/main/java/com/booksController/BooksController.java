@@ -101,7 +101,6 @@ public class BooksController {
     @RequestMapping("/edit")
     public ModelAndView editStudent(Books books) {
         Books books1 = booksService.get(books.getBookId());
-
         ModelAndView mav = new ModelAndView();
         mav.addObject("emp",books1);
         mav.setViewName("books/update");
@@ -110,8 +109,12 @@ public class BooksController {
 
     @RequestMapping("/update")
     public ModelAndView update(Books books) {
-        booksService.update(books);
         ModelAndView mav = new ModelAndView();
+        if(books==null){
+            mav.setViewName("books/update");
+        }else {
+            booksService.update(books);
+        }
         mav.setViewName("redirect:/book/list");
         return mav;
     }

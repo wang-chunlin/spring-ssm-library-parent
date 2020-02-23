@@ -9,16 +9,15 @@
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="/static/html/reader/readerUpdate.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/reader/readerUpdate.css">
     <script src="/static/js/jquery-3.3.1.min.js"></script>
     <script src="/static/bootstrap/js/bootstrap.js"></script>
     <link href="/static/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet"/>
     <script src="//libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/static/js/readAdd.js"></script>
 </head>
 <body>
-    <div id="div4">
-        <h1>修改读者信息</h1>
-    </div>
+    <h1 class="h1">修改读者信息</h1>
     <form action="/readers/update" method="post" role="form">
         <div id="div1">
             <label>读者ID:</label>
@@ -46,10 +45,7 @@
             <input type="file" class="form-control" name="photo" value="${read.photo}">
         </div>
         <div id="div3">
-            <%--        <button id="btn" type="submit" class="btn btn-default">修改</button>--%>
-            <%--        <button id="btn1" type="button" class="btn btn-default">取消</button>--%>
-            <%--        <button id="btn2" type="reset" class="btn btn-default">重置</button>--%>
-            <input type="submit" value="编辑">
+            <input type="submit" value="编辑" onclick="setOK()">
         </div>
 
     </form>

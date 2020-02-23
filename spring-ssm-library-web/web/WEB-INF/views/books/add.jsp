@@ -20,7 +20,7 @@
             <input type="text" name="bookName"/>
             <span class="tianjia">${bookName}</span><br>
             <label>出版社:</label>
-            &nbsp;&nbsp;<input type="text" name="press"/>
+            <input type="text" name="press" id="input-press"/>
             <span class="tianjia">${press}</span><br>
             <label>藏书总量:</label>
             <input type="text" name="total"/>
@@ -33,7 +33,7 @@
         </div>
        <div id="book_div2">
            <label>作者:</label>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="author"/>
+           <input type="text" name="author" id="input-author"/>
            <span class="tianjia">${author}</span><br>
            <label>出版时间:</label>
            <input type="date" name="presstime">
@@ -45,7 +45,7 @@
        </div>
        <div id="book_div3">
            <label>译者:</label>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="translator">
+           <input type="text" name="translator" id="input-translator">
            <span class="tianjia">${translator}</span><br>
            <label>图书类型:</label>
            <input type="text" name="sortId"/>

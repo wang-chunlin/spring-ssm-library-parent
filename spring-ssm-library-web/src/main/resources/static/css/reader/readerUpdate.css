@@ -1,22 +1,27 @@
+/*背景图片*/
 body{
-    background-size: 100%;					/*图片大小*/
+    background-size: 100%;
     background-repeat: no-repeat;
+    background-image: url(../../img/2.jpg);
 }
+/*form表单*/
 form{
     margin-left: 300px;
     margin-top: 30px;
 }
+
 input.form-control{
     width: 300px;
 }
-
-#div4{
-    margin-left: 950px;
+.h1{
+    margin-left: 850px;
+    font-family: 楷体;
 }
+/*第二、三个容器*/
 #div1,#div2{
     float: left;
 }
-
+/*第四个div容器*/
 #div3{
     margin-top: 150px;
     margin-right: 200px;

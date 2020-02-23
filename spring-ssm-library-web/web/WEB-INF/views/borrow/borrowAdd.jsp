@@ -13,15 +13,12 @@
     <script src="/static/bootstrap/js/bootstrap.js"></script>
     <link href="/static/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet"/>
     <script src="//libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="/static/html/borrow/borrowAdd.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/borrow/borrowAdd.css"/>
 </head>
 <body>
-<h1 style="margin-left: 50px">借阅图书</h1>
+<h1>借阅图书</h1>
     <form action="/borrows/borrowAdd" method="post">
-
-        <div class="form-group" style="width: 250px;height: 300px;float: left" >
-
+        <div class="form-group">
             <label>读者编号:</label>
             <input type="text" name="readId" placeholder="请填写编号">
             <label>图书编号:</label>
@@ -30,9 +27,8 @@
             <input type="date" name="lendtime" ><br/>
             <label>应还日期:</label>
             <input type="date" name="returntime"><br/>
-
         </div>
-        <input type="submit" value="提交" style="margin-left:200px;margin-bottom: 100px">
+        <input type="submit" id="submit-tijiao" value="提交">
     </form>
 </body>
 </html>
