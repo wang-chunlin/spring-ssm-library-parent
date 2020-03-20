@@ -5,4 +5,26 @@ body{
     background-image: url(../../img/2.jpg);
 }
 
+/*信息行居中*/
+th,td{
+    text-align: center;
+}
+
+h2{
+    margin-left: 510px;
+    font-family: 楷体;
+}
+
+/*分页*/
+.navbar-fixed-bottom{
+    margin-left: 450px;
+}
+
+/*span按钮中字体*/
+span{
+    height: 20px;
+}
+
+
+
 

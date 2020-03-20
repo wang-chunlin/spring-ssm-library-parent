@@ -24,6 +24,10 @@
         <input type="text" name="readId" placeholder="请填写编号">
         <label>图书编号:</label>
         <input type="text" name="bookId" placeholder="请填写编号"><br/>
+        <label>归还日期：</label>
+        <input type="date" name="overTime"><br/>
+        <label>每日租金</label>
+        <input type="text" name="event_rent">
         <label>状态：</label>
         <input type="text" name="state" ><br/>
         <label>报损原因:</label>

@@ -25,8 +25,6 @@
             <input type="text" name="bookId" placeholder="请填写编号"><br/>
             <label>借书日期:</label>
             <input type="date" name="lendtime" ><br/>
-            <label>应还日期:</label>
-            <input type="date" name="returntime"><br/>
         </div>
         <input type="submit" id="submit-tijiao" value="提交">
     </form>

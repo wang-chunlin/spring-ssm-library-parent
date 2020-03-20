@@ -46,17 +46,17 @@
 <table class="table table-hover">
     <tr id="firstTr">
         <th>编号</th>
-        <th>图书名称</th>
-        <th>作者</th>
+        <th style="text-align:center;">图书名称</th>
+        <th style="text-align:center;">作者</th>
         <th>译者</th>
-        <th>出版社</th>
+        <th style="text-align:center;">出版社</th>
         <th>出版时间</th>
 <%--        <th>图书类型</th>--%>
         <th>藏书总量</th>
         <th>馆内剩余</th>
-        <th>存放位置</th>
+        <th style="text-align:center;">存放位置</th>
         <th>登记日期</th>
-        <th colspan="2">操作</th>
+        <th colspan="2" style="text-align:center;">操作</th>
 
     </tr>
     <c:forEach items="${list.list}" var="emp">

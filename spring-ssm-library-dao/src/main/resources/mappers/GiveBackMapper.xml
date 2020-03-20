@@ -3,20 +3,39 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dao.GivebackDao">
-    <select id="getGiveback" parameterType="integer" resultType="com.entity.Giveback">
-        select gb_id,book_id,read_id,lendtime,returntime,over_time,event_rent,rent_day,rent,state,breakage from giveback
-        where shifou_return='是'
+    <resultMap id="giveback" type="com.entity.Giveback">
+        <id column="gb_id" property="gbId"/>
+        <result column="book_id" property="bookId"/>
+        <result column="read_id" property="readId"/>
+        <result column="over_time" property="overTime"/>
+        <result column="event_rent" property="eventRent"/>
+        <result column="rent_day" property="rentDay"/>
+        <result column="rent" property="rent"/>
+        <result column="state" property="state"/>
+        <result column="breakage" property="breakage"/>
+        <association property="borrow" javaType="com.entity.Borrow">
+            <result column="lendtime" property="lendtime"/>
+        </association>
+
+    </resultMap>
+    <select id="getGiveback" parameterType="integer" resultMap="giveback">
+        select a.gb_id,a.book_id,a.read_id,over_time,event_rent,rent,state,breakage ,b.lendtime from giveback a,borrow b
+        where a.book_id = b.book_id and a.read_id = b.read_id and shifou_return='是'
     </select>
 
+    <insert id="insertGiveback">
+        insert into giveback(book_id, read_id,over_time, event_rent,state, breakage)
+        values(#{bookId},#{readId},#{overTime},#{eventRent},#{state},#{breakage})
+    </insert>
     <update id="updateBookNum">
         update books
         set surplus =surplus+1
         where book_id=#{bookId}
     </update>
     <update id="updateGiveback">
-        update giveback
+        update borrow
         set shifou_return='是'
-        where book_id=#{bookId}
+        where book_id=#{bookId} and read_id=#{readId}
     </update>
 
 </mapper>

@@ -21,18 +21,23 @@ import java.util.List;
 @Controller
 @RequestMapping("/book")
 public class BooksController {
+    // 图片路径
     private  static final  String  FILE_DIRECTORY="E:\\spring-ssm-library-parent\\spring-ssm-library-web\\src\\main\\resources\\static\\img";
     @Autowired
     private BooksService booksService;
 
-    //图书查询
+  /*
+  * 图书查询
+  * */
     @RequestMapping("/list")
     public String list(@RequestParam(value = "pageNum",
                                 required = false,defaultValue = "1") int pageNum,
                        @RequestParam(value = "pageSize",
                                required = false,defaultValue = "10") int pageSize, Model model) {
         List<Books> books = booksService.getAll(pageNum, pageSize);
+        //分页
         PageInfo pageInfo = new PageInfo(books);
+        //传数据到前台
         model.addAttribute("list", pageInfo);
         return "books/list";
     }

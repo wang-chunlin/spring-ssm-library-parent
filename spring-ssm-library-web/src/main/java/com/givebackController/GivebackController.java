@@ -24,7 +24,7 @@ public class GivebackController {
     private GivebackServiceImpl serviceImpl;
 
     //查询归还信息
-    @RequestMapping("/List")
+    @RequestMapping("/list")
     public String list(@RequestParam(value = "pageNum",required = false,defaultValue = "1")int pageNum,
                        @RequestParam(value = "pageSize",required = false,defaultValue = "5")int pageSize,
                        Model model){
@@ -43,7 +43,7 @@ public class GivebackController {
     @RequestMapping("/givebackAdd")
     public String givebackAdd(Giveback giveback){
         serviceImpl.backBook(giveback);
-        return "redirect:/giveback/List";
+        return "redirect:/giveback/list";
     }
 
 }

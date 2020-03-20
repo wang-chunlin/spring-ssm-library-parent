@@ -2,6 +2,7 @@ package com.borrowController;
 
 import com.dao.BorrowDao;
 import com.entity.Books;
+import com.entity.Borrow;
 import com.entity.Giveback;
 import com.github.pagehelper.PageInfo;
 import com.service.BooksService;
@@ -37,11 +38,11 @@ public class BorrowController {
      * @return
      */
 //    查询归还信息
-    @RequestMapping("/List")
+    @RequestMapping("/list")
     public String list(@RequestParam(value = "pageNum",required = false,defaultValue = "1")int pageNum,
                        @RequestParam(value = "pageSize",required = false,defaultValue = "5")int pageSize,
                        Model model){
-        List<Giveback> borrowList = borrowService.getAll(pageNum,pageSize);
+        List<Borrow> borrowList = borrowService.getAll(pageNum,pageSize);
         PageInfo pageInfo=new PageInfo(borrowList);
         model.addAttribute("borrow",pageInfo);
         return "borrow/borrowList";
@@ -56,10 +57,10 @@ public class BorrowController {
 
 
     @RequestMapping("/borrowAdd")
-    public String borrowAdd(Giveback giveback){
-        System.out.println("xasdasdsadsadsadsadas"+giveback.getBookId());
-        dao.addInfo(giveback);
-        return "redirect:/borrows/List";
+    public String borrowAdd(Borrow borrow){
+        System.out.println("xasdasdsadsadsadsadas"+borrow.getBookId());
+        dao.addInfo(borrow);
+        return "redirect:/borrows/list";
     }
 
 }

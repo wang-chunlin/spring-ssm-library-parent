@@ -20,7 +20,8 @@ public class GivebackServiceImpl implements GivebackService {
     /*添加归还信息*/
     @Transactional
     public void backBook(Giveback giveback){
+        givebackDao.insertGiveback(giveback);
         givebackDao.updateBookNum(giveback.getBookId());
-        givebackDao.updateGiveback(giveback.getBookId());
+        givebackDao.updateGiveback(giveback.getBookId(),giveback.getReadId());
     }
 }

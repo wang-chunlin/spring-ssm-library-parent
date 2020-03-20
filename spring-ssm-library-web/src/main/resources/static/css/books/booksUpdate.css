@@ -5,10 +5,10 @@ body{
     background-image: url(../../img/2.jpg);
 }
 
-h1{
-    margin-left: 850px;
-    font-family: 楷体;
-}
+/*#span1{*/
+/*    margin-left: 850px;*/
+/*    font-family: 楷体;*/
+/*}*/
 /*form表单*/
 form{
     width: 350px;

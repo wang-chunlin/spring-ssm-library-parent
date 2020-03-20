@@ -1,5 +1,5 @@
  create table sort(
- sort_id int primary key auto_increment,
+ sort_id int primary key auto_increment not null,
  sort_name varchar(10) not null
  );
 

@@ -3,13 +3,26 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dao.BorrowDao">
-    <select id="getAll" resultType="com.entity.Giveback" parameterType="integer">
-        select gb_id,book_id,read_id,lendtime,returntime from giveback
-        where shifou_return='否'
+    <resultMap id="borrow" type="com.entity.Borrow">
+        <id column="bo_id" property="boId"/>
+        <result column="book_id" property="bookId"/>
+        <result column="read_id" property="readId"/>
+        <result column="lendtime" property="lendtime"/>
+        <association property="books" javaType="com.entity.Books">
+            <result column="book_name" property="bookName"/>
+            <result column="position" property="position"/>
+        </association>
+        <association property="readers" javaType="com.entity.Readers">
+            <result column="read_name" property="readName"/>
+        </association>
+    </resultMap>
+    <select id="getAll" resultMap="borrow" parameterType="integer">
+        select a.bo_id,a.book_id,a.read_id,lendtime,b.book_name,position,c.read_name from borrow a,books b,readers c
+        where a.book_id=b.book_id and a.read_id = c.read_id and shifou_return='否'
     </select>
 
     <insert id="insertBottow">
-        insert into giveback(book_id,read_id,lendtime,returntime) values(#{bookId},#{readId},#{lendtime},#{returntime})
+        insert into borrow(book_id,read_id,lendtime) values(#{bookId},#{readId},#{lendtime})
     </insert>
 
     <update id="updateBorrow">

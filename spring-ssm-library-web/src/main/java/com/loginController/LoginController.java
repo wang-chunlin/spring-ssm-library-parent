@@ -1,7 +1,6 @@
 package com.loginController;
 
 import com.entity.Login;
-import com.github.pagehelper.PageHelper;
 import com.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

@@ -1,18 +1,17 @@
  create table books(
- book_id int auto_increment primary key,
+ book_id int auto_increment primary key not null,
  book_name varchar(20) not null,
  author varchar(20) not null,
  translator varchar(20) not null,
  press varchar(20) not null,
  presstime date not null,
- sort_id int ,
+ sort_id int not null,
  foreign key(sort_id) references sort(sort_id),
  total int not null,
  surplus int not null,
  position varchar(20) not null,
  registertime date not null,
- synopsis varchar(20),
---  book_photo varchar(50)
+ synopsis varchar(100)
  );
 
  insert into books(book_name, author, translator, press, presstime, sort_id, total, surplus, position, registertime, synopsis)

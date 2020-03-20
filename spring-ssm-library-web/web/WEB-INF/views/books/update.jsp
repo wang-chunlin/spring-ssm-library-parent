@@ -19,7 +19,7 @@
     <script src="/static/js/booksUpdate.js"></script>
 </head>
 <body>
-    <h1>修改图书信息</h1>
+    <h1 style="margin-left: 900px;font-family: 楷体;">修改图书信息</h1>
     <form  method="post" action="/book/update">
         <label>编号:</label>
         <input type="text" name="bookId" id="input-bookId" value="${emp.bookId}"/><br>

@@ -3,3 +3,22 @@ body{
     background-repeat: no-repeat;
     background-image: url(../../img/2.jpg);
 }
+/*行列对齐*/
+th,td{
+    text-align: center;
+}
+/*界面标题*/
+h2{
+    margin-left: 510px;
+    font-family: 楷体;
+}
+
+/*分页*/
+.navbar-fixed-bottom{
+    margin-left: 450px;
+}
+
+/*span按钮中字体*/
+span{
+    height: 20px;
+}
