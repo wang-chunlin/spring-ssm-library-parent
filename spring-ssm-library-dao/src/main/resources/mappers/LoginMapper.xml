@@ -4,12 +4,14 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dao.LoginDao">
     <select id="logins" resultType="com.entity.Login">
-        select sta_id,sta_name,password from administrator where sta_name=#{staName}
+        select sta_id,sta_name,password from administrator where sta_name=#{staName}and password=#{password}
     </select>
 
     <insert id="register" parameterType="com.entity.Login">
         insert into administrator(sta_name,sta_sex,nation,birthday,idcard,address,phone,graduate,hiredate,password)
         values(#{staName},#{staSex},#{nation},#{birthday},#{idcard,jdbcType=INTEGER},#{address},#{phone},#{graduate},#{hiredate},#{password})
     </insert>
+
+
 
 </mapper>

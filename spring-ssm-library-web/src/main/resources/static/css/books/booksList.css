@@ -2,9 +2,19 @@
 span{
     height: 20px;
 }
+/*标题*/
+h2{
+    margin-left: 500px;
+    font-family: 楷体;
+    float: left;
+}
 /*表中字体*/
-tr,th{
+td,th{
     text-align:center;
+}
+
+.th1{
+    text-align: center;
 }
 /*背景图片*/
 body{
@@ -23,6 +33,7 @@ body{
 #tushuleixin{
     float:left;
     margin-left: 50px;
+    margin-top: 10px;
 }
 
 #leixin-select{
@@ -32,12 +43,13 @@ body{
 #leixin-submit{
     height: 20px;
     line-height: 10px;
+    margin-bottom: 5px;
 }
 
 /*书名查询*/
 #genjushuming{
     width: 250px;
-    margin-top:10px;
+    margin-top:20px;
     margin-bottom: 5px;
     float: left;
 }

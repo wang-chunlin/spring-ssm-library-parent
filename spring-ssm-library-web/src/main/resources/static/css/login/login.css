@@ -1,66 +1,82 @@
 /*背景图片*/
 body{
-    background-size: 1400px;					/*图片大小*/
-    background-repeat: no-repeat;				/*背景图片不重复*/
-    background-image: url(../../img/login1.jpg);   /*背景图片*/
-}
-
-#div1{										    /*登录窗口区域*/
-    width: 370px;							    /*宽度*/
-    height: 370px;							    /*高度*/
-    margin-top:100px ;						    /*上外边距*/
-    margin-left: 500px;						    /*左外边距*/
-    border-radius: 20px;					    /*给div元素添加圆角的边框*/
-    border:3px solid #808080;				    /*边框4清晰度\实线\灰色*/
-    box-shadow:7px 4px 15px #333333;		    /*区域阴影*/
-    -moz-box-shadow:7px -4px 15px #333333;
-    -webkit-box-shadow:7px -4px 15px #333333;
-}
-
-form{
-    padding-top: 50px;							/*上内边距*/
-    padding-left: 70px;						    /*左内边距*/
-}
-
-span{
-    font-size: 25px;
-    color: #0000FF;
-}
-
-#text1,#password1{
-    border: 0px;									/*边框*/
-    outline: 0px;									/*轮廓*/
-    background: none;								/*背景*/
-    border-bottom: 1px solid blue;					/*下边框*/
-}
-#text1{
-    height: 20px;									/*文本框高度*/
-}
-
-#password1{
-    margin-top: 20px;								/*上外边距*/
-}
-
-#button1,#button2{
-    width: 60px;
-    height: 25px;
-    margin-left:30px ;								/*左外边距*/
-    margin-top:30px;								/*上外边距*/
-    background-color:#66d9ff;
-}
-
-#a1{
-    margin-top: 0px;
-    margin-left: 20px;
-    color: #0000FF;
-}
-
-#div2{
-    margin-top: 20px;
-    margin-left: 140px;
-    background-size: 90px;
-    width: 100px;
-    height: 120px;
+    background-image: url("../../img/denglujiemian.jpeg");
+    background-size: 100%;
     background-repeat: no-repeat;
-    background-image:url("../../img/login3.png") ;
+}
+
+/*登录界面标题*/
+#diyige{
+    width: 300px;
+    height: 70px;
+}
+
+/*logo*/
+#img{
+    width: 70px;
+    height: 70px;
+    opacity: 0.5;
+    margin-top: 10px;
+    margin-left: 20px;
+    background-image: url("../../img/logo.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    float: left;
+}
+/*流星图书的div*/
+#xitong{
+    width: 180px;
+    height: 20px;
+    margin-left: 15px;
+    margin-top: 15px;
+    float: left;
+}
+/*界面标题文字*/
+#span1{
+    font-size: 40px;
+    font-family: 楷体;
+}
+
+/*登录框*/
+#denglukuang{
+    margin-top: 110px;
+    margin-left: 900px;
+    width: 330px;
+    height: 350px;
+    background-color: white;
+}
+/*登录框标题div*/
+#biaotou{
+    width: 120px;
+    height: 40px;
+    margin-left: 100px;
+    padding-top: 30px;
+}
+/*登录框标题文字*/
+#span2{
+    font-size: 30px;
+}
+
+/*输入框*/
+#shurukuang{
+    width: 230px;
+    height: 200px;
+    padding-top: 50px;
+    margin-left: 50px;
+}
+/*输入框大小*/
+#staName,#password,#denglu{
+    width: 230px;
+    height: 40px;
+}
+/*注册框*/
+#shuru{
+    width: 230px;
+    height: 30px;
+    margin-top: 6px;
+}
+/*注册文字*/
+#zhuce{
+    font-size: 10px;
+    margin-left: 180px;
 }

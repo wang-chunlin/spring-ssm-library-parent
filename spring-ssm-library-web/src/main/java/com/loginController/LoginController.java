@@ -28,19 +28,22 @@ public class LoginController {
 
     //登录验证
     @RequestMapping("/login")
-    public String login(Login login, Model model, HttpServletRequest request, HttpSession session) {
+    public String login(Login login, Model model, HttpServletRequest request,BindingResult result, HttpSession session) {
         String staName = request.getParameter("staName");
         String password = request.getParameter("password");
         if (loginService.logins(login) != null) {
-            session.setAttribute("staName", staName);
-            session.setAttribute("password", password);
-            return "forward:/buju/select";
+            if(result.hasErrors()){
+                model.addAttribute("error", "账号或密码错误");
+                return "redirect:/login";
+            }else {
+                session.setAttribute("staName", staName);
+                session.setAttribute("password", password);
+                return "forward:/buju/select";
+            }
         } else {
-            model.addAttribute("error", "账号或密码错误");
+            model.addAttribute("error", "账号或密码不能为空");
             return "redirect:/login";
         }
-
-
     }
 
 

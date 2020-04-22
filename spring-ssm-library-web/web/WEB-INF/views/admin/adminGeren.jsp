@@ -33,7 +33,7 @@
         <input type="text" value="${admin.graduate}" readonly><br/>
         <label>入职时间:</label>
         <input type="text" value="${admin.hiredate}" readonly><br/>
-
+        <a href="/admin/updateAdmin/?staName=${admin.staName}" class="btn btn-info btn-xs" role="button">编辑</a>
     </form>
 
 

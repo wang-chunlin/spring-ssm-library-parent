@@ -16,7 +16,7 @@ public interface BooksService {
     void delete(int bookId);
     //修改图书
     void update(Books books);
-
+//    获取图书编号
     Books get(int bookId);
     //书名查询
     List<Books> getBookName(int pageNum, int pageSize,String bookName);

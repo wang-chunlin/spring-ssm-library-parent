@@ -21,8 +21,6 @@ import java.util.List;
 @Controller
 @RequestMapping("/book")
 public class BooksController {
-    // 图片路径
-    private  static final  String  FILE_DIRECTORY="E:\\spring-ssm-library-parent\\spring-ssm-library-web\\src\\main\\resources\\static\\img";
     @Autowired
     private BooksService booksService;
 
@@ -38,7 +36,7 @@ public class BooksController {
         //分页
         PageInfo pageInfo = new PageInfo(books);
         //传数据到前台
-        model.addAttribute("list", pageInfo);
+        model.addAttribute("book", pageInfo);
         return "books/list";
     }
 

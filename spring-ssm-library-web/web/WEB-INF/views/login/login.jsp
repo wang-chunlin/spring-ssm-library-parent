@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/login/login1.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/login/login.css"/>
     <script src="/static/bootstrap/js/bootstrap.js"></script>
     <link href="/static/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet"/>
 </head>

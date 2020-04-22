@@ -17,18 +17,20 @@
     <script src="/static/bootstrap/js/bootstrap.js"></script>
     <link href="/static/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="/static/css/reader/readerList.css">
+    <script src="/static/js/readList.js"></script>
 </head>
 <body>
-<div class="col-lg-6" id="div-xingming">
-    <form action="${path}/readers/getReaderName" method="post">
-        <div class="input-group" >
-            <input type="text" name="bookName" class="form-control" placeholder="根据姓名查询">
-            <span class="input-group-btn">
-                <button class="btn btn-default" onclick="butOK" type="submit">Go!</button>
-            </span>
-        </div>
-    </form>
-</div>
+    <div class="col-lg-6" id="div-xingming">
+        <form action="${path}/readers/getReaderName" method="post">
+            <div class="input-group" >
+                <input type="text" name="bookName" class="form-control" placeholder="根据姓名查询">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" onclick="butOK" type="submit">Go!</button>
+                </span>
+            </div>
+        </form>
+    </div>
+    <h2>读者信息</h2>
     <table class="table table-hover">
         <tr>
             <th>读者编号</th>
@@ -56,7 +58,7 @@
               <td>${read.remarks}</td>
               <td><img id="img1" src="/static/img/${read.photo}"> </td>
               <td>
-                  <a href="/readers/delete/?readId=${read.readId}" class="btn btn-warning btn-xs">删除</a>
+                  <a href="/readers/delete/?readId=${read.readId}" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#myModal">删除</a>
               </td>
               <td>
                   <a href="/readers/edit/?readId=${read.readId}" class="btn btn-info btn-xs">编辑</a>
@@ -77,9 +79,5 @@
               </ul>
           </div>
     </footer>
-<script>
-
-
-</script>
 </body>
 </html>

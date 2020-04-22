@@ -8,19 +8,28 @@
        where sta_name=#{name}
     </select>
 
-    <update id="updateAdmin" parameterType="com.entity.Login">
+    <update id="updatePassword" parameterType="com.entity.Login">
         update administrator
             set password=#{password}
             where sta_name=#{staName}
     </update>
 
-    <delete id="deleteAdmin" parameterType="integer">
-       delete from administrator where sta_id=#{staId}
-   </delete>
 
     <select id="getAdmin" resultType="com.entity.Login">
         select sta_id,sta_name,sta_sex,nation,birthday,idcard,address,phone,graduate,hiredate,password from administrator
-        where sta_name=#{staName}
+       where sta_name=#{name}
     </select>
 
+    <update id="updateAdmin">
+        update administrator
+            set sta_name=#{staName},
+                sta_sex=#{staSex},
+                nation=#{nation},
+                birthday=#{birthday},
+                idcard=#{idcard},
+                address=#{address},
+                phone=#{phone},
+                graduate=#{graduate}
+                where sta_name=#{staName}
+    </update>
 </mapper>

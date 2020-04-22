@@ -4,11 +4,22 @@ body{
    background-repeat: no-repeat;
    background-image: url(../../img/2.jpg);
 }
+/*读者信息标题*/
+h2{
+   margin-left: 750px;
+   float: left;
+   font-family: 楷体;
+}
+
+/*行列居中*/
+th,td{
+   text-align: center;
+}
 
 /*姓名查询*/
 #div-xingming{
    width: 250px;
-   margin-top:10px;
+   margin-top:20px;
    margin-bottom: 5px;
    float: left;
 }
